@@ -1,11 +1,17 @@
+#!/usr/bin/env python3
 a = 1;
 
 def outer(c):
-    b = 1;
+    b = 2;
     def inner(d):
-        print(a)
-        print(b)
-        print(c)
-        print(d)
+        print("a: %s" % a)
+        print("b: %s" % b)
+        print("c: %s" % c)
+        print("d: %s" % d)
     return inner
+
+b = 1
+
+f1 = outer(3)
+f1(4)
 
